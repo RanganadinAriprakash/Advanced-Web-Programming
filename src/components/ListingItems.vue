@@ -44,7 +44,7 @@ export default {
 <style scoped>
 
 .search-container{
-    margin: 0px 100px 20px 65px;
+    margin: -50px 100px 10px 65px;
     position: relative;
     width: 500px;
     height: 40px;
@@ -71,7 +71,7 @@ export default {
     background-color: #F1F1F1;
     padding:1px;
     margin: 0px 1px 10px 60px;
-    height: 780px;
+    height: 830px;
     border-radius: 10px;
     overflow-x: hidden;
     overflow-y:auto;
@@ -87,6 +87,7 @@ export default {
     width: auto;
     border-radius: 10px;
     background-color: var(--gereral-color-lightBlue);
+    box-shadow: 1px 2px 5px 1px #414141;
 }
 
 .book-img{

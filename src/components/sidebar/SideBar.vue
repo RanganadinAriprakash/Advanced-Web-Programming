@@ -49,7 +49,7 @@ export default {
     
     display: flex;
     flex-direction: column;
-    box-shadow: 4px 3px 8px 1px #414141;
+    box-shadow: 4px 3px 5px 1px #414141;
     
 }
 
@@ -66,6 +66,7 @@ export default {
 
 .collapse-icon:hover{
     color:white;
+    cursor: pointer;
 }
 
 

@@ -34,11 +34,9 @@ export default {
 
 #logo-efrei{
     float: right;
-    position: fixed;
+    position: relative;
     z-index: 1;
-    top: 0;
-    right: 0;
-    bottom: 0;
+    bottom: 10;
     padding: 0.5em;
     width: 7.5rem;
 }

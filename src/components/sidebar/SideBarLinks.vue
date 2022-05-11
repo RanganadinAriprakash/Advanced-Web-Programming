@@ -4,9 +4,6 @@
 
 <script>
 export default {
-    props:{
-
-    },
     setup() {
         
     },

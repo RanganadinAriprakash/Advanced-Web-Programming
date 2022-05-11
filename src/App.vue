@@ -9,7 +9,6 @@
 import HomePage from './components/HomePage.vue'
 import SideBar from './components/sidebar/SideBar.vue'
 import {sideBarWidth} from './components/sidebar/state.js'
-
 export default {
   name: 'App',
   setup(){
@@ -31,7 +30,6 @@ export default {
   margin-top: 60px;
   color:white;
 }
-
 #logo-efrei{
     float: right;
     position: relative;

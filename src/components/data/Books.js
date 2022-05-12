@@ -6,7 +6,7 @@ export const books = [
         bookAuthor: "Hanya Yanagihara",
         bookDateOfPublication: "2022", 
         bookDescription: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Iaculis urna id volutpat lacus laoreet non curabitur gravida arcu. Enim diam vulputate ut pharetra sit amet aliquam id diam. Sit amet nulla facilisi morbi tempus iaculis urna id. Interdum velit laoreet id donec ultrices tincidunt. Augue eget arcu dictum varius duis at consectetur lorem. Quisque egestas diam in arcu cursus euismod. Duis at consectetur lorem donec. Sodales ut etiam sit amet nisl purus in. Posuere lorem ipsum dolor sit. Id nibh tortor id aliquet lectus. Leo a diam sollicitudin tempor. Non enim praesent elementum facilisis leo vel. Congue mauris rhoncus aenean vel elit.",
-        Available: true
+        nbCopies : 5
     },
     {
         id: "1",
@@ -15,7 +15,7 @@ export const books = [
         bookAuthor: "Jessamine Chan",
         bookDateOfPublication: "2022", 
         bookDescription:"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Iaculis urna id volutpat lacus laoreet non curabitur gravida arcu. Enim diam vulputate ut pharetra sit amet aliquam id diam. Sit amet nulla facilisi morbi tempus iaculis urna id. Interdum velit laoreet id donec ultrices tincidunt. Augue eget arcu dictum varius duis at consectetur lorem. Quisque egestas diam in arcu cursus euismod. Duis at consectetur lorem donec. Sodales ut etiam sit amet nisl purus in. Posuere lorem ipsum dolor sit. Id nibh tortor id aliquet lectus. Leo a diam sollicitudin tempor. Non enim praesent elementum facilisis leo vel. Congue mauris rhoncus aenean vel elit.",
-        Available: false
+        nbCopies : 2
     },
     {
         id: "2",
@@ -24,7 +24,7 @@ export const books = [
         bookAuthor: "Ali Hazelwood",
         bookDateOfPublication: "2022", 
         bookDescription:"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Iaculis urna id volutpat lacus laoreet non curabitur gravida arcu. Enim diam vulputate ut pharetra sit amet aliquam id diam. Sit amet nulla facilisi morbi tempus iaculis urna id. Interdum velit laoreet id donec ultrices tincidunt. Augue eget arcu dictum varius duis at consectetur lorem. Quisque egestas diam in arcu cursus euismod. Duis at consectetur lorem donec. Sodales ut etiam sit amet nisl purus in. Posuere lorem ipsum dolor sit. Id nibh tortor id aliquet lectus. Leo a diam sollicitudin tempor. Non enim praesent elementum facilisis leo vel. Congue mauris rhoncus aenean vel elit.",
-        Available: true
+        nbCopies : 0
     },
     {
         id: "3",
@@ -33,7 +33,7 @@ export const books = [
         bookAuthor: "Charmaine Wilkerson",
         bookDateOfPublication: "2022", 
         bookDescription:"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Iaculis urna id volutpat lacus laoreet non curabitur gravida arcu. Enim diam vulputate ut pharetra sit amet aliquam id diam. Sit amet nulla facilisi morbi tempus iaculis urna id. Interdum velit laoreet id donec ultrices tincidunt. Augue eget arcu dictum varius duis at consectetur lorem. Quisque egestas diam in arcu cursus euismod. Duis at consectetur lorem donec. Sodales ut etiam sit amet nisl purus in. Posuere lorem ipsum dolor sit. Id nibh tortor id aliquet lectus. Leo a diam sollicitudin tempor. Non enim praesent elementum facilisis leo vel. Congue mauris rhoncus aenean vel elit.",
-        Available: true
+        nbCopies : 10
     },
     {
         id: "4", 
@@ -42,7 +42,7 @@ export const books = [
         bookAuthor: "Sue Lynn Tan",
         bookDateOfPublication: "2022", 
         bookDescription:"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Iaculis urna id volutpat lacus laoreet non curabitur gravida arcu. Enim diam vulputate ut pharetra sit amet aliquam id diam. Sit amet nulla facilisi morbi tempus iaculis urna id. Interdum velit laoreet id donec ultrices tincidunt. Augue eget arcu dictum varius duis at consectetur lorem. Quisque egestas diam in arcu cursus euismod. Duis at consectetur lorem donec. Sodales ut etiam sit amet nisl purus in. Posuere lorem ipsum dolor sit. Id nibh tortor id aliquet lectus. Leo a diam sollicitudin tempor. Non enim praesent elementum facilisis leo vel. Congue mauris rhoncus aenean vel elit.",
-        Available: true
+        nbCopies : 1
 
     }
 ]

@@ -1,13 +1,18 @@
 <template>
-  <component1/>
+  <div class="flexing">
+    <component1/>
+    <cart/>
+  </div>
 </template>
 
 <script>
 import ListingItems from "./ListingItems.vue"
+import Cart from "./Cart.vue"
 export default {
   name: 'HomePage',
   components:{
-    component1: ListingItems
+    component1: ListingItems,
+    cart: Cart
   },
   props: {
     msg: String
@@ -31,5 +36,11 @@ li {
 }
 a {
   color: #42b983;
+}
+
+.flexing{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: left;
 }
 </style>

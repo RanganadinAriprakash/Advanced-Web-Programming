@@ -1,12 +1,9 @@
 <template>
-  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/Logo_Efrei_2022.svg/1200px-Logo_Efrei_2022.svg.png" alt="EFREI PARIS" id="logo-efrei">
-  <HomePage/>
   <SideBar/>
   <div :style="{'margin-left': sideBarWidth}"></div>
 </template>
 
 <script>
-import HomePage from './components/HomePage.vue'
 import SideBar from './components/sidebar/SideBar.vue'
 import {sideBarWidth} from './components/sidebar/state.js'
 export default {
@@ -15,8 +12,7 @@ export default {
     return {sideBarWidth}
   },
   components: {
-    HomePage,
-    SideBar
+    SideBar,
   }
 }
 </script>
@@ -32,7 +28,8 @@ export default {
 }
 #logo-efrei{
     float: right;
-    position: relative;
+    position: absolute;
+    margin-left: 325px ;
     z-index: 1;
     bottom: 10;
     padding: 0.5em;

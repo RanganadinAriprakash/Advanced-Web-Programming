@@ -10,9 +10,9 @@
             <span>{{book.bookAuthor}}</span>, <span>{{book.bookDateOfPublication}}</span><br><br>
             <span>{{book.bookDescription}}</span><br><br>
             
-            <div v-if="book.Available">
-                <span style="font-weight: bold">Available</span><br><br>
-                <button>Take IT!</button>
+            <div v-if="book.nbCopies !== 0">
+                <span style="font-weight: bold">Available: {{book.nbCopies}}</span><br><br>
+                <button @click="test(book.id)">+</button>
             </div>
             <div v-else><span style="font-style: italic">Not available</span></div>
             
@@ -23,20 +23,25 @@
 
 <script>
 import {books} from "../components/data/Books"
+
 export default {
     name:"ListingItems",
-    setup () {
-        return {books};
-    },
     data () {
         return {
             search: "",
+            books
         }
     },
     computed: {
         filterBooks(){
             return this.books.filter(book => book.bookTitle.includes(this.search) || book.bookAuthor.includes(this.search))
-        }
+        },
+    },
+    methods: {
+        test(index) {
+            this.books[index].nbCopies--;
+
+        },
     }
 }
 </script>

@@ -3,12 +3,18 @@
         <h1>
             <span v-if="collapsed">Menu</span>
         </h1>
+        <nav v-if="collapsed">
+            <router-link to='/'>Home</router-link><br>
+            <router-link to='/profil'>Profil</router-link>
+        </nav>
+
     <span class="collapse-icon" :class="{'rotate-180' : collapsed}" @click="toggleSideBar">
     <i class="fas fa-angle-double-left"></i>
     </span>
-    
     </div>
     
+    <router-view></router-view>
+
 </template>
 
 <script>

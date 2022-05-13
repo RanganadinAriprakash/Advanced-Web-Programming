@@ -1,57 +1,56 @@
 <template>
-    <div class="catalog-books">
-        <div class="book" v-for="book in filterBooks" :key="book.id">
-            <div><img v-bind:src="book.bookImage" alt="Book" class="book-img" style=""></div>
-            <div class="book-description">
-            <span class="title-book">{{book.bookTitle}}</span><br>
-            <span>{{book.bookAuthor}}</span>, <span>{{book.bookDateOfPublication}}</span>
-            
-            
-            </div>
+    <div class="cart-container">
+        <h1><span class="title-cart">Cart</span></h1>
+        <div v-for="(book, index) in passData()" :key=(index)>
+            <span style="color: black">{{book.bookTitle}}</span>
+            <span style="color: black">{{book.quantityTaken}}</span>
+            <button @click="removeFromCart(book, index)">-</button>
         </div>
     </div>
 </template>
 
 <script>
-import {books} from "../components/data/Books"
 
 export default {
-    name:"ListingItems",
+    name:"CartItem",
+    setup(){
+
+    },
+    props:{
+        books: Array,
+        test: String,
+        passData: Function
+    },
     data () {
         return {
-            search: "",
-            books
+            book_cart: this.passData()
         }
     },
-    computed: {
-        filterBooks(){
-            return this.books.filter(book => book.bookTitle.includes(this.search) || book.bookAuthor.includes(this.search))
-        },
-    },
-    methods: {
-        test(index) {
-            this.books[index].nbCopies--;
+    methods:{
+        removeFromCart(book, index){
+            this.$emit("add-to-catalog", book)
+            this.book_cart.pop(index)
+        }
 
-        },
     }
+
 }
 </script>
 
 <style scoped>
 
-.catalog-books{
-    display:flex;
-    flex-wrap: nowrap;
-    background-color: blue;
-    padding:1px;
-    margin: 0px 1px 10px 60px;
-    height: 200px;
+.cart-container{
+    flex-basis: 30%;
+    background-color: #F1F1F1;
+    padding: 20px;
+    margin: 0px 33px 65px;
+    height: 300px;
     border-radius: 10px;
-    overflow-x: auto;
-    overflow-y: auto;
+    overflow-y :auto;
+
 }
 
-.book{
+.cart-books{
     margin: 10px 10px 10px 10px;
     padding: 20px; 
     display: flex;
@@ -62,7 +61,6 @@ export default {
     border-radius: 10px;
     background-color: var(--gereral-color-lightBlue);
     box-shadow: 1px 2px 5px 1px #414141;
-    flex-basis: 100%;
 }
 
 .book-img{
@@ -79,10 +77,13 @@ export default {
 }
 
 .title-book{
-    font-size: 20px;
+    font-size: 16px;
     font-weight: bold;
 }
 
+.title-cart{
+    color: black;
+}
 
 
 </style>

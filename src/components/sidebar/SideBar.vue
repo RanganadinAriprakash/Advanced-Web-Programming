@@ -1,7 +1,7 @@
 <template>
     <div class="sidebar" :style="{width: sideBarWidth}">
         <h1>
-            <span v-if="collapsed">Menu</span>
+            <span v-if="collapsed">EFREI Library</span>
         </h1>
         <nav v-if="collapsed">
             <router-link to='/'>Home</router-link><br>

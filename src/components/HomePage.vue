@@ -5,7 +5,7 @@
   <h1><span id="catalog-title">Catalog</span></h1><br><br><br>
   <div class="flexing">
     <div class="catalog-books">
-      <div class="book" v-for="book in filterBooks" :key="book.id">
+      <div class="book" v-for="(book, index) in filterBooks" :key="index">
           <div><img v-bind:src="book.bookImage" alt="Book" class="book-img" style=""></div>
           <div class="book-description">
             <span class="title-book">{{book.bookTitle}}</span><br>
@@ -18,10 +18,14 @@
             </div>
             <div v-else><span style="font-style: italic">Not available</span></div>
           </div>
+          <div>
+          <button @click="deleteBook(index)"></button>
+          </div>
       </div>
     </div>
     <!--Là c'est l'enfant-->
     <cart :passData="passData" @add-to-catalog="addToCatalogFromCart($event)"/>
+    <formu @add-to-catalog="addToCatalogFromForm($event)"/>
     
 
   </div>
@@ -30,13 +34,12 @@
 <script>
 import {books} from "../components/data/Books"
 import Cart from "./Cart.vue"
+import Form from "./FormAddingBook.vue"
 export default {
   name: 'HomePage',
   components:{
-    cart: Cart
-  },
-  props: {
-    msg: String
+    cart: Cart,
+    formu: Form
   },
   data (){
     return{
@@ -68,8 +71,14 @@ export default {
           break;
         }
       }
-      
+    },
+    addToCatalogFromForm(book){
+      console.log(book)
+    },
+    deleteBook(data){
+      this.books.splice(data, 1)
     }
+
   }
 
 }

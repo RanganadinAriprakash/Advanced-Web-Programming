@@ -3,9 +3,9 @@
         <h1><span class="title-cart">Cart</span></h1>
         <div v-for="(book, index) in passData()" :key=(index)>
             <span style="color: black">{{book.bookTitle}}</span>
-            <span style="color: black">{{book.quantityTaken}}</span>
             <button @click="removeFromCart(book, index)">-</button>
         </div>
+        <button @click="validateCart">Validate Cart</button>
     </div>
 </template>
 
@@ -13,9 +13,6 @@
 
 export default {
     name:"CartItem",
-    setup(){
-
-    },
     props:{
         books: Array,
         test: String,
@@ -30,8 +27,13 @@ export default {
         removeFromCart(book, index){
             this.$emit("add-to-catalog", book)
             this.book_cart.pop(index)
-        }
+        },
+        validateCart(){
+            for (var i = 0; i < this.book_cart.length; i++){
+                this.book_cart.splice(i)
+            }
 
+        }
     }
 
 }

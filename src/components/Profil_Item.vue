@@ -1,6 +1,7 @@
 <template>
     <div>
-        <h1>Profil</h1>
+        <h1><span style="color: black">Profil</span></h1>
+        <button> Logout</button>
     </div>
 </template>
 
